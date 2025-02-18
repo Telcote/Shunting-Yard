@@ -120,11 +120,14 @@ namespace model_lab1
                 } 
                 else
                 {
-                    // Если на вершине стэка (, то не хватает закрывающей скобки
-                    if (stack.Peek() == 0) { Fail(); }
+                    
+                    
 
                     while (stack.Count > 0 && this.fail != true)
                     {
+                        // Если на вершине стэка (, то не хватает закрывающей скобки
+                        if (stack.Peek() == 0) { Fail(); }
+
                         output.Add(stack.Pop());
                     }
                     this.state = 0;
