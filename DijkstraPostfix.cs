@@ -20,7 +20,7 @@ namespace model_lab1
         public void AddToList(byte b)
         {
             input.Add(b);
-            //При изменении входной строки обновляем Enumerator
+            // При изменении входной строки обновляем Enumerator
             pos = input.GetEnumerator();
         }
 
@@ -51,7 +51,7 @@ namespace model_lab1
             output.Clear();
         }
 
-        //Состояние 0 означает начальное состояние
+        // Состояние 0 означает начальное состояние
         public byte state = 0;
         public bool fail = false;
 
@@ -67,7 +67,7 @@ namespace model_lab1
         {
             if(input.Count > 0)
             {
-                //Если не дошли до дна массива
+                // Если не дошли до дна массива
                 if ( pos.MoveNext() )
                 {
                     this.fail = false;
@@ -91,15 +91,15 @@ namespace model_lab1
                                 { 
                                     output.Add(stack.Pop());
 
-                                    //Если стек пустой, то пропущена скобка
-
-                                    if (stack.Count == 0)
-                                    {
-                                        Fail();
-                                        break;
-                                    }
                                 }
-                                
+                                // Если стек пустой, то пропущена скобка
+
+                                if (stack.Count == 0)
+                                {
+                                    Fail();
+                                    break;
+                                }
+
                                 stack.Pop();
                                 break;
                             }
@@ -120,6 +120,9 @@ namespace model_lab1
                 } 
                 else
                 {
+                    // Если на вершине стэка (, то не хватает закрывающей скобки
+                    if (stack.Peek() == 0) { Fail(); }
+
                     while (stack.Count > 0 && this.fail != true)
                     {
                         output.Add(stack.Pop());
