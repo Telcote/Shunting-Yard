@@ -1,5 +1,3 @@
-using System.Configuration;
-
 namespace model_lab1
 {
     internal static class Program

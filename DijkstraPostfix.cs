@@ -15,6 +15,7 @@ namespace model_lab1
             { 8, 4 }, { 9, 4 }, { 10,  4 }, { 11, 4}
         };
 
+        // Ввод
         private List<byte> input = new List<byte>();
 
         public void AddToList(byte b)
@@ -32,14 +33,12 @@ namespace model_lab1
 
         public List<byte> GetInputString() { return input; }
 
-
-
+        // Вывод
         public List<byte> output = new List<byte>();
         
         public List<byte> GetOutputString() { return output; }
 
-
-
+        // Стэк
         private Stack<byte> stack = new Stack<byte>();
 
         public List<byte> GetStack() { return stack.ToList(); }
@@ -120,9 +119,6 @@ namespace model_lab1
                 } 
                 else
                 {
-                    
-                    
-
                     while (stack.Count > 0 && this.fail != true)
                     {
                         // Если на вершине стэка (, то не хватает закрывающей скобки

@@ -1,7 +1,3 @@
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
-
 namespace model_lab1
 {
     public partial class Form1 : Form
@@ -15,13 +11,6 @@ namespace model_lab1
         private DijkstraPostfix dijkstraPostfix = new DijkstraPostfix();
 
         //Ассоциативная таблица для математических символов
-        //private static Dictionary<byte, string> dictionary = new Dictionary<byte, string>()
-        //{
-        //    { 0, "+" }, { 1, "-" }, { 2, "*" }, { 3, "/" },
-        //    { 4, "^" }, { 5,  "(" }, { 6, ")" }, { 7, "ln"},
-        //    { 8, "sin" }, { 9, "cos" }, { 10,  "tg" }, { 11, "sqrt"},
-        //    { 12, "a" }, { 13, "b" }, { 14, "c" }, { 15, "d" }
-        //};
         private static Dictionary<byte, string> dictionary = new Dictionary<byte, string>()
         {
             { 0, "(" }, { 1, ")" }, { 2, "-" }, { 3, "+" },
