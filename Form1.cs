@@ -1,7 +1,3 @@
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
-
 namespace model_lab1
 {
     public partial class Form1 : Form

@@ -33,7 +33,7 @@ namespace model_lab1
         public void AddToList(byte b)
         {
             input.Add(b);
-            //При изменении входной строки обновляем Enumerator
+            // При изменении входной строки обновляем Enumerator
             pos = input.GetEnumerator();
         }
 
@@ -45,14 +45,12 @@ namespace model_lab1
 
         public List<byte> GetInputString() { return input; }
 
-
-
+        // Вывод
         public List<byte> output = new List<byte>();
         
         public List<byte> GetOutputString() { return output; }
 
-
-
+        // Стэк
         private Stack<byte> stack = new Stack<byte>();
         public int stackPointer = 0;
         public List<byte> GetStack() {
@@ -68,7 +66,7 @@ namespace model_lab1
             output.Clear();
         }
 
-        //Состояние 0 означает начальное состояние
+        // Состояние 0 означает начальное состояние
         public byte state = 0;
         public bool fail = false;
 
