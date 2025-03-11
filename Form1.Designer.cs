@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             label1 = new Label();
@@ -57,9 +58,19 @@
             label3 = new Label();
             button21 = new Button();
             label4 = new Label();
-            textBox3 = new TextBox();
             timer1 = new System.Windows.Forms.Timer(components);
             button13 = new Button();
+            dataGridView1 = new DataGridView();
+            dijkstraPostfixBindingSource = new BindingSource(components);
+            richTextBox1 = new RichTextBox();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            labelArrow = new Label();
+            button18 = new Button();
+            button19 = new Button();
+            button20 = new Button();
+            button22 = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dijkstraPostfixBindingSource).BeginInit();
             SuspendLayout();
             // 
             // textBox1
@@ -322,7 +333,7 @@
             // 
             // button21
             // 
-            button21.Location = new Point(12, 327);
+            button21.Location = new Point(12, 380);
             button21.Name = "button21";
             button21.Size = new Size(240, 47);
             button21.TabIndex = 28;
@@ -333,19 +344,11 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(696, 114);
+            label4.Location = new Point(617, 124);
             label4.Name = "label4";
             label4.Size = new Size(39, 20);
             label4.TabIndex = 30;
             label4.Text = "Стек";
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(696, 146);
-            textBox3.Name = "textBox3";
-            textBox3.ReadOnly = true;
-            textBox3.Size = new Size(645, 27);
-            textBox3.TabIndex = 29;
             // 
             // timer1
             // 
@@ -354,7 +357,7 @@
             // 
             // button13
             // 
-            button13.Location = new Point(258, 327);
+            button13.Location = new Point(258, 380);
             button13.Name = "button13";
             button13.Size = new Size(240, 47);
             button13.TabIndex = 31;
@@ -362,14 +365,106 @@
             button13.UseVisualStyleBackColor = true;
             button13.Click += buttonInputHandler;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView1.CausesValidation = false;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.ColumnHeadersVisible = false;
+            dataGridView1.Location = new Point(696, 147);
+            dataGridView1.MinimumSize = new Size(16, 16);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(286, 222);
+            dataGridView1.TabIndex = 32;
+            // 
+            // dijkstraPostfixBindingSource
+            // 
+            dijkstraPostfixBindingSource.DataSource = typeof(DijkstraPostfix);
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.Location = new Point(988, 147);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(353, 222);
+            richTextBox1.TabIndex = 34;
+            richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.BackColor = Color.White;
+            flowLayoutPanel1.FlowDirection = FlowDirection.BottomUp;
+            flowLayoutPanel1.Location = new Point(617, 147);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(73, 496);
+            flowLayoutPanel1.TabIndex = 35;
+            // 
+            // labelArrow
+            // 
+            labelArrow.AutoSize = true;
+            labelArrow.Location = new Point(589, 150);
+            labelArrow.Name = "labelArrow";
+            labelArrow.Size = new Size(22, 20);
+            labelArrow.TabIndex = 36;
+            labelArrow.Text = "→";
+            // 
+            // button18
+            // 
+            button18.Location = new Point(381, 327);
+            button18.Name = "button18";
+            button18.Size = new Size(117, 47);
+            button18.TabIndex = 40;
+            button18.Text = "i";
+            button18.UseVisualStyleBackColor = true;
+            button18.Click += buttonInputHandler;
+            // 
+            // button19
+            // 
+            button19.Location = new Point(258, 327);
+            button19.Name = "button19";
+            button19.Size = new Size(117, 47);
+            button19.TabIndex = 39;
+            button19.Text = "g";
+            button19.UseVisualStyleBackColor = true;
+            button19.Click += buttonInputHandler;
+            // 
+            // button20
+            // 
+            button20.Location = new Point(135, 327);
+            button20.Name = "button20";
+            button20.Size = new Size(117, 47);
+            button20.TabIndex = 38;
+            button20.Text = "f";
+            button20.UseVisualStyleBackColor = true;
+            button20.Click += buttonInputHandler;
+            // 
+            // button22
+            // 
+            button22.Location = new Point(12, 327);
+            button22.Name = "button22";
+            button22.Size = new Size(117, 47);
+            button22.TabIndex = 37;
+            button22.Text = "e";
+            button22.UseVisualStyleBackColor = true;
+            button22.Click += buttonInputHandler;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1353, 685);
+            Controls.Add(button18);
+            Controls.Add(button19);
+            Controls.Add(button20);
+            Controls.Add(button22);
+            Controls.Add(labelArrow);
+            Controls.Add(flowLayoutPanel1);
+            Controls.Add(richTextBox1);
+            Controls.Add(dataGridView1);
             Controls.Add(button13);
             Controls.Add(label4);
-            Controls.Add(textBox3);
             Controls.Add(button21);
             Controls.Add(label3);
             Controls.Add(manualMode);
@@ -399,6 +494,9 @@
             Controls.Add(textBox1);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dijkstraPostfixBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -433,8 +531,16 @@
         private Label label3;
         private Button button21;
         private Label label4;
-        private TextBox textBox3;
         private System.Windows.Forms.Timer timer1;
         private Button button13;
+        private DataGridView dataGridView1;
+        private BindingSource dijkstraPostfixBindingSource;
+        private RichTextBox richTextBox1;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private Label labelArrow;
+        private Button button18;
+        private Button button19;
+        private Button button20;
+        private Button button22;
     }
 }
